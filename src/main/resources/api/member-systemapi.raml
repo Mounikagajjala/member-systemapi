@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: member systemAPI
+description: The Api will fetch the member details using memberid
+
+/member:
+  /{memberID}:
+    get:
+    
+      description: the API will fetch member details.
+      headers:
+       X-Cms-TransactionId:
+         maxLength: 36
+         minLength: 36
+         type: string
+         required: true
+         example:
+          "dsfjkhskdffsdfhdsfkjdjshfhghj888y6gv"
+
+      responses:
+        200:
+          body:
+            application/json:
+              description: "sucess mesage"
+        400:
+        401:
+        404:
+        500:
+    post:
+        
+            
